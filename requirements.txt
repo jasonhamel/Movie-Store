@@ -1,17 +1,24 @@
 Movie Object will be an abstract object
-    - will define a name, price, run time, stars NC, MPCRS rating, and year of release
+    - will define a name, run time, stars NC, MPCRS rating, and year of release
+    - can be bought or rented
+    - may be DVD, Blu-ray, or HD DVD
 
-DVD will be a child of movie
+DVD
     - will implement the discount class and have a 90% discount on all objects of this type
 
-Blu-ray will be a child of movie
+Blu-ray
     - will not implement the discount class unless it stars Nicolas Cage
 
-HD DVD will be a child of movie
+HD DVD
     - will implement the discount class and have a 50% discount on all objects of this type
 
 Store
     - manages the importing of movies
+    - must have employees punched in before opening
+    - must be opened to sell/rent/return
+    - when store is closed for the day a report of inventory left in stock and money made that day will be run
 
 Employee
+    - must punch in/out
     - sells/rents movies
+    - returns movies
