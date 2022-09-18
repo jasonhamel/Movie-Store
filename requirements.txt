@@ -1,0 +1,17 @@
+Movie Object will be an abstract object
+    - will define a name, price, run time, stars NC, MPCRS rating, and year of release
+
+DVD will be a child of movie
+    - will implement the discount class and have a 90% discount on all objects of this type
+
+Blu-ray will be a child of movie
+    - will not implement the discount class unless it stars Nicolas Cage
+
+HD DVD will be a child of movie
+    - will implement the discount class and have a 50% discount on all objects of this type
+
+Store
+    - manages the importing of movies
+
+Employee
+    - sells/rents movies
