@@ -1,15 +1,17 @@
 package main.model.movie;
 
 
-public class Movie {
+public abstract class Movie {
     private String name;
+    private double cost;
     private double runTime;
     private boolean starsNickCage;
     private String rating;
     private int yearOfRelease;
 
-    public Movie(String name, double runTime, boolean starsNickCage, String rating, int yearOfRelease) {
+    public Movie(String name, double cost, double runTime, boolean starsNickCage, String rating, int yearOfRelease) {
         this. name = name;
+        this.cost = cost;
         this.runTime = runTime;
         this.starsNickCage = starsNickCage;
         this.rating = rating;
@@ -18,6 +20,7 @@ public class Movie {
 
     public Movie(Movie source) {
         this.name = source.name;
+        this.cost = source.cost;
         this.runTime = source.runTime;
         this.starsNickCage = source.starsNickCage;
         this.rating = source.rating;
@@ -27,6 +30,7 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie Name: " + this.name + "\n" +
+                "Movie Cost: $" + this.cost + "\n" +
                 "Runtime in Minutes: " + this.runTime + "\n" +
                 "Stars Nick Cage: " + this.starsNickCage + "\n" +
                 "MPCRS Rating: " + this.rating + "\n" +
@@ -41,6 +45,19 @@ public class Movie {
         this.name = name;
     }
 
+    public double getCost() {
+        return cost;
+    }
+
+    public void setCost(Object obj, double cost) {
+        if (obj instanceof DVD) {
+            this.cost = cost * .10;
+        } else {
+            this.cost = cost;
+        }
+
+    }
+
     public double getRunTime() {
         return runTime;
     }
@@ -49,7 +66,7 @@ public class Movie {
         this.runTime = runTime;
     }
 
-    public boolean isStarsNickCage() {
+    public boolean getStarsNickCage() {
         return starsNickCage;
     }
 
@@ -61,7 +78,7 @@ public class Movie {
         return rating;
     }
 
-    private void setRating(String rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
