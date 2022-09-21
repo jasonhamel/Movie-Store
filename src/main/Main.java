@@ -1,11 +1,11 @@
 package main;
 
-import main.model.movie.DVD;
+import main.model.movie.HDDVD;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        DVD movie = new DVD("Flatliners", 99.99, 120, false, "R", 1990);
+        HDDVD movie = new HDDVD("Flatliners", 99.99, 120, false, "R", 1990);
         System.out.println(movie);
         System.out.println(movie.getName());
         System.out.println(movie.getCost());

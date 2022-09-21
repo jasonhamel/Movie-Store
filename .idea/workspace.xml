@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Began work on Movie class and completed requirements.txt">
-      <change afterPath="$PROJECT_DIR$/src/main/model/movie/DVD.java" afterDir="false" />
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Created the DVD class and overrode the discount method from the Discount class">
+      <change afterPath="$PROJECT_DIR$/src/main/model/movie/HDDVD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/movie/Movie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663544815577</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created the DVD class and overrode the discount method from the Discount class">
+      <created>1663720611708</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663720611708</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -114,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit with starting of requirements.txt made" />
     <MESSAGE value="Began work on Movie class and completed requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Began work on Movie class and completed requirements.txt" />
+    <MESSAGE value="Created the DVD class and overrode the discount method from the Discount class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the DVD class and overrode the discount method from the Discount class" />
   </component>
 </project>

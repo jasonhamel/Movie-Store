@@ -52,7 +52,10 @@ public abstract class Movie {
     public void setCost(Object obj, double cost) {
         if (obj instanceof DVD) {
             this.cost = cost * .10;
-        } else {
+        } else if (obj instanceof HDDVD) {
+            this.cost = cost * .5;
+        }
+        else {
             this.cost = cost;
         }
 
