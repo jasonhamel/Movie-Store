@@ -2,7 +2,7 @@ Movie Object will be an abstract object
     - will define a name, run time, stars NC, MPCRS rating, and year of release
     - can be bought or rented
     - may be DVD, Blu-ray, or HD DVD
-
+    - if a movie stars Nick Cage, it should have a $4 discount applied to it
 DVD
     - will implement the discount class and have a 90% discount on all objects of this type
 
@@ -22,3 +22,7 @@ Employee
     - must punch in/out
     - sells/rents movies
     - returns movies
+
+
+    KNOWN BUGS
+Changing a movie to star Nick Cage after setting the price doesn't apple the discount.

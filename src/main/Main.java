@@ -1,5 +1,6 @@
 package main;
 
+import main.model.movie.DVD;
 import main.model.movie.HDDVD;
 
 public class Main {
@@ -15,9 +16,9 @@ public class Main {
         System.out.println(movie.getYearOfRelease());
         System.out.println();
         movie.setName("Jason");
-        movie.setCost(movie, 50);
-        movie.setRunTime(999);
         movie.setStarsNickCage(true);
+        movie.updateCost(50);
+        movie.setRunTime(999);
         movie.setRating("PG13");
         movie.setYearOfRelease(1987);
         System.out.println(movie);

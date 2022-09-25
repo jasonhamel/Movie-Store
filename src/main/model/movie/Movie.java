@@ -16,6 +16,8 @@ public abstract class Movie {
         this.starsNickCage = starsNickCage;
         this.rating = rating;
         this.yearOfRelease = yearOfRelease;
+        discountForCage();
+        discountForMediaType();
     }
 
     public Movie(Movie source) {
@@ -49,16 +51,8 @@ public abstract class Movie {
         return cost;
     }
 
-    public void setCost(Object obj, double cost) {
-        if (obj instanceof DVD) {
-            this.cost = cost * .10;
-        } else if (obj instanceof HDDVD) {
-            this.cost = cost * .5;
-        }
-        else {
-            this.cost = cost;
-        }
-
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
     public double getRunTime() {
@@ -91,5 +85,27 @@ public abstract class Movie {
 
     public void setYearOfRelease(int yearOfRelease) {
         this.yearOfRelease = yearOfRelease;
+    }
+
+    public void discountForCage() {
+        if (getStarsNickCage()) {
+            this.cost -= 4;
+        }
+    }
+
+    private void discountForMediaType() {
+        final double DVD_DISCOUNT = .1;
+        final double HDDVD_DISCOUNT = .5;
+        if (this instanceof DVD) {
+            setCost(getCost() * DVD_DISCOUNT);
+        } else if (this instanceof HDDVD) {
+            setCost(getCost() * HDDVD_DISCOUNT);
+        }
+    }
+
+    public void updateCost(double cost) {
+        setCost(cost);
+        discountForCage();
+        discountForMediaType();
     }
 }
