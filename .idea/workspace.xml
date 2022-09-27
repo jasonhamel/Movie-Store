@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Created the HDDVD class and overrode the discount method from the Discount class. Lol @ the implementation of the discount method in both DVD and HDDVD. Will need to circle back to that">
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely.">
+      <change afterPath="$PROJECT_DIR$/src/main/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/movie/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/movie/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/movie/HDDVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/movie/HDDVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/movie/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/movie/impl/Discount.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663722223578</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely.">
+      <created>1664132003843</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664132003843</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -133,6 +136,7 @@
     <MESSAGE value="Began work on Movie class and completed requirements.txt" />
     <MESSAGE value="Created the DVD class and overrode the discount method from the Discount class" />
     <MESSAGE value="Created the HDDVD class and overrode the discount method from the Discount class. Lol @ the implementation of the discount method in both DVD and HDDVD. Will need to circle back to that" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the HDDVD class and overrode the discount method from the Discount class. Lol @ the implementation of the discount method in both DVD and HDDVD. Will need to circle back to that" />
+    <MESSAGE value="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely." />
   </component>
 </project>
