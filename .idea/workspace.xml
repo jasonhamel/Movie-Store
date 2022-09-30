@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely.">
-      <change afterPath="$PROJECT_DIR$/src/main/Store.java" afterDir="false" />
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Wrote my first Singleton with the Store class. Stole the advanced multi-threading ideas from YouTube. I'm sure I'll multi-thread some day, but not in this project :)">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/movie/Bluray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/testMovie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
@@ -30,15 +33,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jason Hamel/Documents/Coding/Movie Store/Movie Store&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Jason Hamel/Documents/Coding/Movie Store/Movie Store",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="JUnit.testMovie.testMovies">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="untitled" />
@@ -52,8 +60,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testMovie.testMovies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.testMovie" />
+      <option name="METHOD_NAME" value="testMovies" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.testMovie.testMovies" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -102,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664132003843</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Wrote my first Singleton with the Store class. Stole the advanced multi-threading ideas from YouTube. I'm sure I'll multi-thread some day, but not in this project :)">
+      <created>1664321422029</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664321422029</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -137,6 +169,7 @@
     <MESSAGE value="Created the DVD class and overrode the discount method from the Discount class" />
     <MESSAGE value="Created the HDDVD class and overrode the discount method from the Discount class. Lol @ the implementation of the discount method in both DVD and HDDVD. Will need to circle back to that" />
     <MESSAGE value="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely." />
+    <MESSAGE value="Wrote my first Singleton with the Store class. Stole the advanced multi-threading ideas from YouTube. I'm sure I'll multi-thread some day, but not in this project :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote my first Singleton with the Store class. Stole the advanced multi-threading ideas from YouTube. I'm sure I'll multi-thread some day, but not in this project :)" />
   </component>
 </project>
