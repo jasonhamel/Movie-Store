@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Wrote my first Singleton with the Store class. Stole the advanced multi-threading ideas from YouTube. I'm sure I'll multi-thread some day, but not in this project :)">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/movie/Bluray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/testMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Wrote the Bluray class and Employee class. Imported Junit and completed a test to make sure its setup correctly.">
+      <change beforePath="$PROJECT_DIR$/src/main/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Store.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664321422029</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Wrote the Bluray class and Employee class. Imported Junit and completed a test to make sure its setup correctly.">
+      <created>1664497824861</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664497824861</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -170,6 +172,7 @@
     <MESSAGE value="Created the HDDVD class and overrode the discount method from the Discount class. Lol @ the implementation of the discount method in both DVD and HDDVD. Will need to circle back to that" />
     <MESSAGE value="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely." />
     <MESSAGE value="Wrote my first Singleton with the Store class. Stole the advanced multi-threading ideas from YouTube. I'm sure I'll multi-thread some day, but not in this project :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote my first Singleton with the Store class. Stole the advanced multi-threading ideas from YouTube. I'm sure I'll multi-thread some day, but not in this project :)" />
+    <MESSAGE value="Wrote the Bluray class and Employee class. Imported Junit and completed a test to make sure its setup correctly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote the Bluray class and Employee class. Imported Junit and completed a test to make sure its setup correctly." />
   </component>
 </project>
