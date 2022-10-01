@@ -4,13 +4,13 @@ Movie Object will be an abstract object
     - may be DVD, Blu-ray, or HD DVD
     - if a movie stars Nick Cage, it should have a $4 discount applied to it
 DVD
-    - will implement the discount class and have a 90% discount on all objects of this type
+    - will have a 90% discount on all objects of this type
 
 Blu-ray
-    - will not implement the discount class unless it stars Nicolas Cage
+    - will have a discount unless it stars Nicolas Cage
 
 HD DVD
-    - will implement the discount class and have a 50% discount on all objects of this type
+    - will have a 50% discount on all objects of this type
 
 Store
     - manages the importing of movies
@@ -26,3 +26,4 @@ Employee
 
     KNOWN BUGS
 Changing a movie to star Nick Cage after setting the price doesn't apple the discount.
+Cost of movies not rounded to 2 decimal places.
