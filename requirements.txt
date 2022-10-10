@@ -14,8 +14,7 @@ HD DVD
 
 Store
     - manages the importing of movies
-    - must have employees punched in before opening
-    - must be opened to sell/rent/return
+    - must be opened to sell
     - when store is closed for the day a report of inventory left in stock and money made that day will be run
 
 Employee

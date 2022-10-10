@@ -28,8 +28,8 @@ public class Main {
         System.out.println(movie.getStarsNickCage());
         System.out.println(movie.getRating());
         System.out.println(movie.getYearOfRelease());
-        Store.getInstance().changeStock("Die Hard", 7);
-        Store.getInstance().changeStock("Die Hard 2", 10);
-        Store.getInstance().changeStock("Die Hard", 1);
+        Store.getInstance().changeStock(movie, 7);
+        //Store.getInstance().changeStock("Die Hard 2", 10);
+        Store.getInstance().changeStock(movie, 1);
     }
 }
