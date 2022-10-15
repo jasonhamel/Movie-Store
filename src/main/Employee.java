@@ -5,9 +5,12 @@ public class Employee {
     private String name;
     private int employeeNumber;
 
+    private boolean punchStatus;
+
     public Employee( String name, int employeeNumber) {
         this.name = name;
         this.employeeNumber = employeeNumber;
+        this.punchStatus = false;
     }
 
     @Override
@@ -30,5 +33,26 @@ public class Employee {
 
     private void setEmployeeNumber(int employeeNumber) {
         this.employeeNumber = employeeNumber;
+    }
+
+    public boolean getPunchStatus() {
+        return punchStatus;
+    }
+
+    public void setPunchStatus(boolean punchStatus) {
+        this.punchStatus = punchStatus;
+    }
+
+    public boolean punch() {
+        changePunchStatus();
+        return this.punchStatus;
+    }
+
+    public void changePunchStatus() {
+        if (!this.punchStatus) {
+            setPunchStatus(true);
+        } else {
+            setPunchStatus(false);
+        }
     }
 }

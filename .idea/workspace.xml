@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Made testBluray, testDVD, and test HDDVD classes and made generic tests. Added a bug to requirements.txt">
-      <change afterPath="$PROJECT_DIR$/src/test/testStore.java" afterDir="false" />
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Made testStore.java and tested the adding/removing of movies to the store">
+      <change afterPath="$PROJECT_DIR$/src/test/testEmployee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +44,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.testStore">
-    <configuration name="testStore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.testEmployee">
+    <configuration name="testBluray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -55,13 +54,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testStore" />
+      <option name="MAIN_CLASS_NAME" value="test.testBluray" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testStore.testAddToStoreDVD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testDVD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -70,14 +69,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testStore" />
-      <option name="METHOD_NAME" value="testAddToStoreDVD" />
+      <option name="MAIN_CLASS_NAME" value="test.testDVD" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.testEmployee" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testEmployee.testPunchIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.testEmployee" />
+      <option name="METHOD_NAME" value="testPunchIn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testStore.testRemoveFromStoreBLURAY" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testHDDVD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -86,52 +115,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testStore" />
-      <option name="METHOD_NAME" value="testRemoveFromStoreBLURAY" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testStore.testRemoveFromStoreDVD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testStore" />
-      <option name="METHOD_NAME" value="testRemoveFromStoreDVD" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testStore.testRemoveFromStoreHDDVD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testStore" />
-      <option name="METHOD_NAME" value="testRemoveFromStoreHDDVD" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="test.testHDDVD" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testStore" />
-        <item itemvalue="JUnit.testStore.testRemoveFromStoreBLURAY" />
-        <item itemvalue="JUnit.testStore.testRemoveFromStoreHDDVD" />
-        <item itemvalue="JUnit.testStore.testRemoveFromStoreDVD" />
-        <item itemvalue="JUnit.testStore.testAddToStoreDVD" />
+        <item itemvalue="JUnit.testEmployee" />
+        <item itemvalue="JUnit.testEmployee.testPunchIn" />
+        <item itemvalue="JUnit.testBluray" />
+        <item itemvalue="JUnit.testDVD" />
+        <item itemvalue="JUnit.testHDDVD" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664648128400</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Made testStore.java and tested the adding/removing of movies to the store">
+      <created>1665415179935</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665415179935</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -245,6 +248,7 @@
     <MESSAGE value="Wrote my first Singleton with the Store class. Stole the advanced multi-threading ideas from YouTube. I'm sure I'll multi-thread some day, but not in this project :)" />
     <MESSAGE value="Wrote the Bluray class and Employee class. Imported Junit and completed a test to make sure its setup correctly." />
     <MESSAGE value="Made testBluray, testDVD, and test HDDVD classes and made generic tests. Added a bug to requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made testBluray, testDVD, and test HDDVD classes and made generic tests. Added a bug to requirements.txt" />
+    <MESSAGE value="Made testStore.java and tested the adding/removing of movies to the store" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made testStore.java and tested the adding/removing of movies to the store" />
   </component>
 </project>
