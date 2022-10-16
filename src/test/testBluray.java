@@ -25,4 +25,12 @@ public class testBluray {
     public void testNickCageDiscount() {
         Assert.assertEquals(96, bluray2.getCost(), 0);
     }
+
+    @Test
+    public void testRentalDiscount() {
+        bluray.rentalDiscount();
+        bluray2.rentalDiscount();
+        Assert.assertEquals(12.50, bluray.getCost(), 0);
+        Assert.assertEquals(24, bluray2.getCost(), 0);
+    }
 }

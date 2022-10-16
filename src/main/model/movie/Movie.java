@@ -1,13 +1,17 @@
 package main.model.movie;
 
 
+import java.text.DecimalFormat;
+
 public abstract class Movie {
+    DecimalFormat df = new DecimalFormat("#.##");
     private String name;
     private double cost;
     private double runTime;
     private boolean starsNickCage;
     private String rating;
     private int yearOfRelease;
+    private final double RENTAL_DISCOUNT = .25;
 
     public Movie(String name, double cost, double runTime, boolean starsNickCage, String rating, int yearOfRelease) {
         this. name = name;
@@ -52,7 +56,7 @@ public abstract class Movie {
     }
 
     public void setCost(double cost) {
-        this.cost = cost;
+        this.cost = Double.parseDouble(df.format(cost));
     }
 
     public double getRunTime() {
@@ -107,5 +111,9 @@ public abstract class Movie {
         setCost(cost);
         discountForCage();
         discountForMediaType();
+    }
+
+    public void rentalDiscount() {
+        setCost(getCost() * RENTAL_DISCOUNT);
     }
 }

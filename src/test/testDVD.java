@@ -23,7 +23,14 @@ public class testDVD {
 
     @Test
     public void testNickCageDiscount() {
-        Assert.assertEquals(9.6, dvd2.getCost(), 0.00000000000001);
+        Assert.assertEquals(9.6, dvd2.getCost(), 0);
     }
 
+    @Test
+    public void testRentalDiscount() {
+        dvd.rentalDiscount();
+        dvd2.rentalDiscount();
+        Assert.assertEquals(1.25, dvd.getCost(), 0);
+        Assert.assertEquals(2.40, dvd2.getCost(), 0);
+    }
 }

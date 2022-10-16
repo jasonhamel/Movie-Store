@@ -25,4 +25,12 @@ public class testHDDVD {
     public void testNickCageDiscount() {
         Assert.assertEquals(48, hddvd2.getCost(), 0);
     }
+
+    @Test
+    public void testRentalDiscount() {
+        hddvd.rentalDiscount();
+        hddvd2.rentalDiscount();
+        Assert.assertEquals(6.25, hddvd.getCost(), 0);
+        Assert.assertEquals(12, hddvd2.getCost(), 0);
+    }
 }

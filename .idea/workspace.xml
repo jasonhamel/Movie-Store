@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Made testStore.java and tested the adding/removing of movies to the store">
-      <change afterPath="$PROJECT_DIR$/src/test/testEmployee.java" afterDir="false" />
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Made testEmployee.java and tested the adding employees and changing punched in status">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/movie/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testBluray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testBluray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testDVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testDVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testHDDVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testHDDVD.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +46,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.testEmployee">
-    <configuration name="testBluray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.testBluray.testRentalDiscount">
+    <configuration name="testBluray.testRentalDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -55,7 +57,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.testBluray" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testRentalDiscount" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -75,6 +78,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testDVD.testRentalDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.testDVD" />
+      <option name="METHOD_NAME" value="testRentalDiscount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <extension name="coverage">
@@ -90,23 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testEmployee.testPunchIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testEmployee" />
-      <option name="METHOD_NAME" value="testPunchIn" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testHDDVD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testHDDVD.testRentalDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -116,18 +119,19 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.testHDDVD" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testRentalDiscount" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testEmployee" />
-        <item itemvalue="JUnit.testEmployee.testPunchIn" />
-        <item itemvalue="JUnit.testBluray" />
+        <item itemvalue="JUnit.testBluray.testRentalDiscount" />
+        <item itemvalue="JUnit.testHDDVD.testRentalDiscount" />
         <item itemvalue="JUnit.testDVD" />
-        <item itemvalue="JUnit.testHDDVD" />
+        <item itemvalue="JUnit.testDVD.testRentalDiscount" />
+        <item itemvalue="JUnit.testEmployee" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665415179935</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Made testEmployee.java and tested the adding employees and changing punched in status">
+      <created>1665871833374</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665871833374</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -249,6 +260,7 @@
     <MESSAGE value="Wrote the Bluray class and Employee class. Imported Junit and completed a test to make sure its setup correctly." />
     <MESSAGE value="Made testBluray, testDVD, and test HDDVD classes and made generic tests. Added a bug to requirements.txt" />
     <MESSAGE value="Made testStore.java and tested the adding/removing of movies to the store" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made testStore.java and tested the adding/removing of movies to the store" />
+    <MESSAGE value="Made testEmployee.java and tested the adding employees and changing punched in status" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made testEmployee.java and tested the adding employees and changing punched in status" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 Movie Object will be an abstract object
     - DONE will define a name, run time, stars NC, MPCRS rating, and year of release
-    - can be bought or rented
-    - DONE may be DVD, Blu-ray, or HD DVD
+    - DONE can be bought or rented
+    - DONE can be DVD, Blu-ray, or HD DVD
     - DONE if a movie stars Nick Cage, it should have a $4 discount applied to it
 DVD
     - DONE will have a 90% discount on all objects of this type
@@ -25,4 +25,4 @@ Employee
 
     KNOWN BUGS
 Changing a movie to star Nick Cage after setting the price doesn't apple the discount.
-Cost of movies not rounded to 2 decimal places.
+Check on returning rentals
