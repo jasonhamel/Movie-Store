@@ -13,6 +13,8 @@ public class Store {
     private HashMap<String, Integer> hddvdStock = new HashMap<>();
     private HashMap<String, Integer> blurayStock = new HashMap<>();
 
+    private boolean storeStatus = false;
+
     private Store() {
     }
 
@@ -98,9 +100,25 @@ public class Store {
         return true;
     }
 
+    public boolean getStoreStatus() {
+        return storeStatus;
+    }
+
+    public void setStoreStatus(boolean storeStatus) {
+        this.storeStatus = storeStatus;
+    }
+
     public void clearStore() {
         dvdStock.clear();
         hddvdStock.clear();
         blurayStock.clear();
+    }
+
+    public void openStore() {
+        setStoreStatus(true);
+    }
+
+    public void closeStore() {
+        setStoreStatus(false);
     }
 }
