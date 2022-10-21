@@ -19,10 +19,10 @@ Store
 
 Employee
     - DONE must punch in/out
-    - sells/rents movies
-    - returns movies
+    - DONE sells/rents movies
+    - DONE returns movies
 
 
     KNOWN BUGS
 Changing a movie to star Nick Cage after setting the price doesn't apple the discount.
-Check on returning rentals
+

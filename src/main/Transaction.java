@@ -1,6 +1,7 @@
 package main;
 
 import java.util.Date;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Transaction {
 
@@ -10,8 +11,8 @@ public class Transaction {
     private double cost;
     private Date date = new Date();
 
-    public Transaction(long transactionID, String employeeName, int employeeID, double cost, Date date) {
-        this.transactionID = transactionID;
+    public Transaction(String employeeName, int employeeID, double cost, Date date) {
+        this.transactionID = generateTransactionID();
         this.employeeName = employeeName;
         this.employeeID = employeeID;
         this.cost = cost;
@@ -19,7 +20,7 @@ public class Transaction {
     }
 
     public Transaction(Transaction source) {
-        this.transactionID = source.transactionID;
+        this.transactionID = generateTransactionID();
         this.employeeName = source.employeeName;
         this.employeeID = source.employeeID;
         this.cost = source.cost;
@@ -65,5 +66,9 @@ public class Transaction {
 
     public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public static long generateTransactionID() {
+        return ThreadLocalRandom.current().nextLong(1, 999999999);
     }
 }

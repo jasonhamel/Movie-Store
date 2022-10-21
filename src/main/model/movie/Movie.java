@@ -116,4 +116,5 @@ public abstract class Movie {
     public void rentalDiscount() {
         setCost(getCost() * RENTAL_DISCOUNT);
     }
+
 }

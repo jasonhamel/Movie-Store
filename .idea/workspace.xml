@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Built renting functionality into Movie.class">
-      <change afterPath="$PROJECT_DIR$/src/main/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/testTransaction.java" afterDir="false" />
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Started building the Transaction.java class to allow the sales summary at the end of each day">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/movie/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testTransaction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665887500920</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Started building the Transaction.java class to allow the sales summary at the end of each day">
+      <created>1666053710670</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666053710670</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -269,6 +276,7 @@
     <MESSAGE value="Made testStore.java and tested the adding/removing of movies to the store" />
     <MESSAGE value="Made testEmployee.java and tested the adding employees and changing punched in status" />
     <MESSAGE value="Built renting functionality into Movie.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Built renting functionality into Movie.class" />
+    <MESSAGE value="Started building the Transaction.java class to allow the sales summary at the end of each day" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started building the Transaction.java class to allow the sales summary at the end of each day" />
   </component>
 </project>

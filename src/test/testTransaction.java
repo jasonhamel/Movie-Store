@@ -30,8 +30,8 @@ public class testTransaction {
     @Before
     public void setup() {
         transactions = new Transaction[] {
-            new Transaction(345232245, employees[0].getName(), employees[0].getEmployeeNumber(), movies[0].getCost(), new Date()),
-                new Transaction(324522, employees[1].getName(), employees[1].getEmployeeNumber(), movies[4].getCost(), new Date())
+            new Transaction(employees[0].getName(), employees[0].getEmployeeNumber(), movies[0].getCost(), new Date()),
+                new Transaction(employees[1].getName(), employees[1].getEmployeeNumber(), movies[4].getCost(), new Date())
         };
     }
 
