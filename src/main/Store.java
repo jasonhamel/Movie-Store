@@ -119,6 +119,8 @@ public class Store {
     }
 
     public void closeStore() {
+        //Print Store Inventory
+        //Print Amount of Money Made
         setStoreStatus(false);
     }
 }

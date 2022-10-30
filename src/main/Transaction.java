@@ -16,7 +16,7 @@ public class Transaction {
         this.employeeName = employeeName;
         this.employeeID = employeeID;
         this.cost = cost;
-        this.date = date;
+        this.date = new Date();
     }
 
     public Transaction(Transaction source) {
@@ -24,7 +24,7 @@ public class Transaction {
         this.employeeName = source.employeeName;
         this.employeeID = source.employeeID;
         this.cost = source.cost;
-        this.date = date;
+        this.date = new Date();
     }
 
     @Override
