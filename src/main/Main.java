@@ -1,7 +1,5 @@
 package main;
 
-import main.model.movie.HDDVD;
-
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;

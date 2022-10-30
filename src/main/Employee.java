@@ -49,10 +49,6 @@ public class Employee {
     }
 
     public void changePunchStatus() {
-        if (!this.punchStatus) {
-            setPunchStatus(true);
-        } else {
-            setPunchStatus(false);
-        }
+        setPunchStatus(!this.punchStatus);
     }
 }

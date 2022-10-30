@@ -48,23 +48,11 @@ public class Store {
         int type = getTypeOfMovie(movie);
         if (checkIfInStock(type, quantity, name)) {
             if (type == 1) {
-                if (dvdStock.get(name) == null) {
-                    dvdStock.put(name, quantity);
-                } else {
-                    dvdStock.put(name, dvdStock.get(name) + quantity);
-                }
+                dvdStock.merge(name, quantity, Integer::sum);
             } else if (type == 2) {
-                if (hddvdStock.get(name) == null) {
-                    hddvdStock.put(name, quantity);
-                } else {
-                    hddvdStock.put(name, hddvdStock.get(name) + quantity);
-                }
+                hddvdStock.merge(name, quantity, Integer::sum);
             } else if (type == 3) {
-                if (blurayStock.get(name) == null) {
-                    blurayStock.put(name, quantity);
-                } else {
-                    blurayStock.put(name, blurayStock.get(name) + quantity);
-                }
+                blurayStock.merge(name, quantity, Integer::sum);
             }
         } else {
             System.out.println("Not enough copies in stock");
@@ -85,17 +73,11 @@ public class Store {
 
     public boolean checkIfInStock(int type, int quantity, String name) {
         if (type == 1 && dvdStock.get(name) != null) {
-            if (dvdStock.get(name) + quantity < 0) {
-                return false;
-            }
+            return dvdStock.get(name) + quantity >= 0;
         } else if (type == 2 && hddvdStock.get(name) != null) {
-            if (hddvdStock.get(name) + quantity < 0) {
-                return false;
-            }
+            return hddvdStock.get(name) + quantity >= 0;
         } else if (type == 3 && blurayStock.get(name) != null) {
-            if (blurayStock.get(name) + quantity < 0) {
-                return false;
-            }
+            return blurayStock.get(name) + quantity >= 0;
         }
         return true;
     }

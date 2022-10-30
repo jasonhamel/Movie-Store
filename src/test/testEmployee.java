@@ -25,8 +25,8 @@ public class testEmployee {
 
     @Test
     public void testPunchIn() {
-        Assert.assertEquals(false, employee.getPunchStatus());
+        Assert.assertFalse(employee.getPunchStatus());
         employee.punch();
-        Assert.assertEquals(true, employee.getPunchStatus());
+        Assert.assertTrue(employee.getPunchStatus());
     }
 }

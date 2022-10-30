@@ -11,7 +11,7 @@ public abstract class Movie {
     private boolean starsNickCage;
     private String rating;
     private int yearOfRelease;
-    private final double RENTAL_DISCOUNT = .25;
+
 
     public Movie(String name, double cost, double runTime, boolean starsNickCage, String rating, int yearOfRelease) {
         this. name = name;
@@ -114,6 +114,7 @@ public abstract class Movie {
     }
 
     public void rentalDiscount() {
+        final double RENTAL_DISCOUNT = .25;
         setCost(getCost() * RENTAL_DISCOUNT);
     }
 

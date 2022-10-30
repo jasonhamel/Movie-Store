@@ -6,6 +6,7 @@ import main.model.movie.Bluray;
 import main.model.movie.DVD;
 import main.model.movie.HDDVD;
 import main.model.movie.Movie;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,8 +31,8 @@ public class testTransaction {
     @Before
     public void setup() {
         transactions = new Transaction[] {
-            new Transaction(employees[0].getName(), employees[0].getEmployeeNumber(), movies[0].getCost(), new Date()),
-                new Transaction(employees[1].getName(), employees[1].getEmployeeNumber(), movies[4].getCost(), new Date())
+            new Transaction(employees[0].getName(), employees[0].getEmployeeNumber(), movies[0].getCost()),
+                new Transaction(employees[1].getName(), employees[1].getEmployeeNumber(), movies[4].getCost())
         };
     }
 
@@ -39,5 +40,6 @@ public class testTransaction {
     public void testGetTransaction() {
         System.out.println(transactions[0]);
         System.out.println(transactions[1]);
+        Assert.assertEquals(transactions[0].getEmployeeName(), "Jason");
     }
 }

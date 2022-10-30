@@ -9,9 +9,9 @@ public class Transaction {
     private String employeeName;
     private int employeeID;
     private double cost;
-    private Date date = new Date();
+    private Date date;
 
-    public Transaction(String employeeName, int employeeID, double cost, Date date) {
+    public Transaction(String employeeName, int employeeID, double cost) {
         this.transactionID = generateTransactionID();
         this.employeeName = employeeName;
         this.employeeID = employeeID;
