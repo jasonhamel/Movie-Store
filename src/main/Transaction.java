@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Transaction {
 
-    private long transactionID;
+    private double transactionID;
     private String employeeName;
     private int employeeID;
     private double cost;
@@ -36,7 +36,7 @@ public class Transaction {
                 "Date: " + date;
     }
 
-    public long getTransactionID() {
+    public double getTransactionID() {
         return transactionID;
     }
 
@@ -68,7 +68,11 @@ public class Transaction {
         this.cost = cost;
     }
 
+    public Date getDate() {
+        return this.date;
+    }
+
     public static long generateTransactionID() {
-        return ThreadLocalRandom.current().nextLong(1, 999999999);
+        return ThreadLocalRandom.current().nextLong(1, 9999999);
     }
 }

@@ -25,4 +25,9 @@ Employee
 
     KNOWN BUGS
 Changing a movie to star Nick Cage after setting the price doesn't apple the discount.
+Store doesn't read/write to DB
 
+
+
+    QUESTIONS
+DB best practise is to get on/of disk as fast as possible and then process data in the logic layer?

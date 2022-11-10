@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Started fiddling with a MySQl connection and learning persistence. Can successfully add a transaction to the database">
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Did some cleanup and made things look a little prettier">
       <change afterPath="$PROJECT_DIR$/mysql-connector-j-8.0.31.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/movie/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/testEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/testTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testTransaction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,20 @@
       <recent name="C:\Users\Jason Hamel\Documents\Coding\Movie Store\Movie Store" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.test in untitled">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test in untitled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <extension name="coverage">
@@ -104,21 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testStore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testStore" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testTransaction.testGetTransaction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <extension name="coverage">
@@ -137,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.test in untitled" />
         <item itemvalue="JUnit.testTransaction.testGetTransaction" />
         <item itemvalue="JUnit.testEmployee.testPunchIn" />
         <item itemvalue="JUnit.testBluray.testBlurayDiscount" />
-        <item itemvalue="JUnit.testStore" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667169333175</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Did some cleanup and made things look a little prettier">
+      <created>1667172025559</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667172025559</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -303,6 +304,23 @@
     <MESSAGE value="Started building the Transaction.java class to allow the sales summary at the end of each day" />
     <MESSAGE value="Updated the Transaction.java class to generate its own random transaction id. In practise this would likely be an incremented long, but wanted to play with ThreadLocalRandom" />
     <MESSAGE value="Started fiddling with a MySQl connection and learning persistence. Can successfully add a transaction to the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started fiddling with a MySQl connection and learning persistence. Can successfully add a transaction to the database" />
+    <MESSAGE value="Did some cleanup and made things look a little prettier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did some cleanup and made things look a little prettier" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Main.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Main.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
