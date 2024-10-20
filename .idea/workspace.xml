@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Did some cleanup and made things look a little prettier">
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Deleted some SQL code and testing a push to this branch">
+      <change afterPath="$PROJECT_DIR$/src/main/QuickStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +25,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jasonhamel&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jasonhamel/Movie-Store.git&quot;,
+    &quot;accountId&quot;: &quot;217d01da-2dee-4a6c-ac6d-a0b378e40834&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2EpDcJCH1Kkfac7BWCy03YX0QA8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,18 +52,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.QuickStart.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.test in untitled.executor": "Run",
+    "JUnit.testTransaction.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "mongoIntegration",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Jason/OneDrive/Documents/Coding/Movie-Store",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -54,9 +76,22 @@
       <recent name="C:\Users\Jason Hamel\Documents\Coding\Movie Store\Movie Store" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.QuickStart">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.QuickStart" />
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -78,22 +113,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testBluray.testBlurayDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testBluray" />
-      <option name="METHOD_NAME" value="testBlurayDiscount" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,20 +151,13 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.test in untitled" />
+        <item itemvalue="Application.QuickStart" />
         <item itemvalue="JUnit.testTransaction.testGetTransaction" />
         <item itemvalue="JUnit.testEmployee.testPunchIn" />
-        <item itemvalue="JUnit.testBluray.testBlurayDiscount" />
+        <item itemvalue="JUnit.test in untitled" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-18.0.2-corretto-18.0.2-4caba194b151-5720f15e" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -268,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1667172025559</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Deleted some SQL code and testing a push to this branch">
+      <option name="closed" value="true" />
+      <created>1729298102956</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1729298102956</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -313,6 +333,7 @@
     <MESSAGE value="Updated the Transaction.java class to generate its own random transaction id. In practise this would likely be an incremented long, but wanted to play with ThreadLocalRandom" />
     <MESSAGE value="Started fiddling with a MySQl connection and learning persistence. Can successfully add a transaction to the database" />
     <MESSAGE value="Did some cleanup and made things look a little prettier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Did some cleanup and made things look a little prettier" />
+    <MESSAGE value="Deleted some SQL code and testing a push to this branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted some SQL code and testing a push to this branch" />
   </component>
 </project>
