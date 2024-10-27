@@ -3,7 +3,7 @@ package main.model.movie;
 
 import java.text.DecimalFormat;
 
-public abstract class Movie {
+public class Movie {
     DecimalFormat df = new DecimalFormat("#.##");
     private String name;
     private double cost;
