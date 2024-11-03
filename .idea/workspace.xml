@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Add the mongo package using Maven, build the QuickStart.java Class to test">
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Adds the ability to read text from a file. This text will be comma-delimited and used to load the initial movie inventory for the set">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/movie-list.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/QuickStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/QuickStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/movie/Movie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "Application.QuickStart.executor": "Run",
+    "Application.QuickStart.executor": "Debug",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.test in untitled.executor": "Run",
     "JUnit.testTransaction.executor": "Run",
@@ -298,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729444847330</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Adds the ability to read text from a file. This text will be comma-delimited and used to load the initial movie inventory for the set">
+      <option name="closed" value="true" />
+      <created>1730048694630</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1730048694630</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -345,7 +353,8 @@
     <MESSAGE value="Did some cleanup and made things look a little prettier" />
     <MESSAGE value="Deleted some SQL code and testing a push to this branch" />
     <MESSAGE value="Add the mongo package using Maven, build the QuickStart.java Class to test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the mongo package using Maven, build the QuickStart.java Class to test" />
+    <MESSAGE value="Adds the ability to read text from a file. This text will be comma-delimited and used to load the initial movie inventory for the set" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds the ability to read text from a file. This text will be comma-delimited and used to load the initial movie inventory for the set" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -354,6 +363,11 @@
           <properties class="java.util.InputMismatchException" package="java.util" />
           <option name="timeStamp" value="7" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/QuickStart.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -1,1 +1,10 @@
-Hot Rod,19.99,90,false,PG13,2007
+Hot Rod,19.99,90,false,PG13,2007,
+Face/Off,35,100,true,PG13,2002,
+The Rock,70,75,true,PG13,2001,
+Next,3,89,true,PG13,1998,
+Leaving Las Vegas,33.33,99,true,PG13,1995,
+Renfield,15.99,120,true,PG13,2005,
+Challengers,19,129,false,PG13,2024,
+The Star Wars Collection,99.99,500,false,PG13,2019,
+Ghost,1,300,false,PG13,1991,
+The Godfather pt. 3,10,236,false,PG13,1987
