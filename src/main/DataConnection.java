@@ -1,5 +1,7 @@
 package main;
 
+import com.mongodb.client.model.Aggregates;
+import com.mongodb.client.model.Filters;
 import main.model.movie.Bluray;
 import main.model.movie.DVD;
 import main.model.movie.HDDVD;
@@ -13,6 +15,7 @@ import com.mongodb.client.MongoDatabase;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static com.mongodb.client.model.Filters.eq;
@@ -22,18 +25,18 @@ public class DataConnection {
         final String DB_KEY = System.getenv("DB_KEY");
         String uri = "mongodb+srv://jason:" + DB_KEY + "@cluster0.ijrik.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
         MongoCollection<Document> collection;
-        try (
-                MongoClient mongoClient = MongoClients.create(uri)) {
+
+        try (MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("Movie_Store");
-            collection = database.getCollection("movie-store");
+            collection = database.getCollection("movies");
             Document doc = collection.find(eq("Name", "Hot Rod")).first();
             if (doc != null) {
-                System.out.println(doc.toJson());
+                //System.out.println(doc.toJson());
             } else {
                 System.out.println("No record. Creating now.");
-                ArrayList<HDDVD> hddvds = createHDDVDs();
-                ArrayList<Bluray> blurays = createBlurays();
-                ArrayList<DVD> dvds = createDVDs();
+                ArrayList<HDDVD> hddvds = scanHDDVDs();
+                ArrayList<Bluray> blurays = scanBlurays();
+                ArrayList<DVD> dvds = scanDVDs();
 
                 for (HDDVD hddvd : hddvds) {
                     Document movieToAdd = getDocument(hddvd);
@@ -65,7 +68,7 @@ public class DataConnection {
         movieToAdd.append("Stars Nick Cage", hddvd.getStarsNickCage());
         movieToAdd.append("Rating", hddvd.getRating());
         movieToAdd.append("Year of Release", hddvd.getYearOfRelease());
-        movieToAdd.append("Type ", hddvd.getClass().getSimpleName());
+        movieToAdd.append("Type", hddvd.getClass().getSimpleName());
         return movieToAdd;
     }
 
@@ -77,7 +80,7 @@ public class DataConnection {
         movieToAdd.append("Stars Nick Cage", dvd.getStarsNickCage());
         movieToAdd.append("Rating", dvd.getRating());
         movieToAdd.append("Year of Release", dvd.getYearOfRelease());
-        movieToAdd.append("Type ", dvd.getClass().getSimpleName());
+        movieToAdd.append("Type", dvd.getClass().getSimpleName());
         return movieToAdd;
     }
 
@@ -89,11 +92,11 @@ public class DataConnection {
         movieToAdd.append("Stars Nick Cage", bluray.getStarsNickCage());
         movieToAdd.append("Rating", bluray.getRating());
         movieToAdd.append("Year of Release", bluray.getYearOfRelease());
-        movieToAdd.append("Type ", bluray.getClass().getSimpleName());
+        movieToAdd.append("Type", bluray.getClass().getSimpleName());
         return movieToAdd;
     }
 
-    private static ArrayList<HDDVD> createHDDVDs() throws FileNotFoundException {
+    private static ArrayList<HDDVD> scanHDDVDs() throws FileNotFoundException {
         ArrayList<HDDVD> hddvds = new ArrayList<>();
         ArrayList<Movie> movies = scanFile();
 
@@ -104,7 +107,7 @@ public class DataConnection {
         return hddvds;
     }
 
-    private static ArrayList<Bluray> createBlurays() throws FileNotFoundException {
+    private static ArrayList<Bluray> scanBlurays() throws FileNotFoundException {
         ArrayList<Bluray> blurays = new ArrayList<>();
         ArrayList<Movie> movies = scanFile();
 
@@ -115,7 +118,7 @@ public class DataConnection {
         return blurays;
     }
 
-    private static ArrayList<DVD> createDVDs() throws FileNotFoundException {
+    private static ArrayList<DVD> scanDVDs() throws FileNotFoundException {
         ArrayList<DVD> dvds = new ArrayList<>();
         ArrayList<Movie> movies = scanFile();
 
@@ -144,6 +147,26 @@ public class DataConnection {
         return movieToReturn;
     }
 
+    public static void checkForDVD(String title) {
+       DVD foundDVD;
+        final String DB_KEY = System.getenv("DB_KEY");
+        String uri = "mongodb+srv://jason:" + DB_KEY + "@cluster0.ijrik.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+
+        try (MongoClient mongoClient = MongoClients.create(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("Movie_Store");
+            MongoCollection<Document> movieFromDB = database.getCollection("movies");
+
+           Document doc = movieFromDB.aggregate(
+                   Arrays.asList(
+               Aggregates.match(Filters.eq("Name", title)),
+               Aggregates.match(Filters.eq("Type", "DVD"))
+           )).first();
+            System.out.println(doc);
+            //need to convert document to object
+            //is there a way to avoid three of the same methods for each media type?
+        }
+    }
 }
 
 
