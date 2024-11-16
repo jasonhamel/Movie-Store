@@ -31,69 +31,51 @@ public class DataConnection {
             collection = database.getCollection("movies");
             Document doc = collection.find(eq("Name", "Hot Rod")).first();
             if (doc != null) {
-                //System.out.println(doc.toJson());
-            } else {
-                System.out.println("No record. Creating now.");
-                ArrayList<HDDVD> hddvds = scanHDDVDs();
-                ArrayList<Bluray> blurays = scanBlurays();
-                ArrayList<DVD> dvds = scanDVDs();
-
-                for (HDDVD hddvd : hddvds) {
-                    Document movieToAdd = getDocument(hddvd);
-                    collection.insertOne(movieToAdd);
-                }
-
-                for (Bluray bluray : blurays) {
-                    Document movieToAdd = getDocument(bluray);
-                    collection.insertOne(movieToAdd);
-                }
-
-                for (DVD dvd : dvds) {
-                    Document movieToAdd = getDocument(dvd);
-                    collection.insertOne(movieToAdd);
-                }
-
+                System.out.println("Emptying database");
+                collection.drop();
             }
+            System.out.println("No record. Creating now.");
+
+            ArrayList<HDDVD> hddvds = scanHDDVDs();
+            ArrayList<Bluray> blurays = scanBlurays();
+            ArrayList<DVD> dvds = scanDVDs();
+            ArrayList<Document> moviesToAdd = new ArrayList<>();
+
+            for (HDDVD hddvd : hddvds) {
+                moviesToAdd.add(getDocument(hddvd));
+            }
+
+            for (Bluray bluray : blurays) {
+                moviesToAdd.add(getDocument(bluray));
+            }
+
+            for (DVD dvd : dvds) {
+                moviesToAdd.add(getDocument(dvd));
+            }
+
+            collection.insertMany(moviesToAdd);
+
+
         } catch (
                 FileNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private static Document getDocument(HDDVD hddvd) {
-        Document movieToAdd = new Document("Name", hddvd.getName());
+    private static Document getDocument(Movie movie) {
+        Document movieToAdd = new Document("Name", movie.getName());
 
-        movieToAdd.append("Cost", hddvd.getCost());
-        movieToAdd.append("Run Time", hddvd.getRunTime());
-        movieToAdd.append("Stars Nick Cage", hddvd.getStarsNickCage());
-        movieToAdd.append("Rating", hddvd.getRating());
-        movieToAdd.append("Year of Release", hddvd.getYearOfRelease());
-        movieToAdd.append("Type", hddvd.getClass().getSimpleName());
+        movieToAdd.append("Cost", movie.getCost());
+        movieToAdd.append("Run Time", movie.getRunTime());
+        movieToAdd.append("Stars Nick Cage", movie.getStarsNickCage());
+        movieToAdd.append("Rating", movie.getRating());
+        movieToAdd.append("Year of Release", movie.getYearOfRelease());
+        movieToAdd.append("Type", movie.getClass().getSimpleName());
         return movieToAdd;
     }
 
-    private static Document getDocument(DVD dvd) {
-        Document movieToAdd = new Document("Name", dvd.getName());
-
-        movieToAdd.append("Cost", dvd.getCost());
-        movieToAdd.append("Run Time", dvd.getRunTime());
-        movieToAdd.append("Stars Nick Cage", dvd.getStarsNickCage());
-        movieToAdd.append("Rating", dvd.getRating());
-        movieToAdd.append("Year of Release", dvd.getYearOfRelease());
-        movieToAdd.append("Type", dvd.getClass().getSimpleName());
-        return movieToAdd;
-    }
-
-    private static Document getDocument(Bluray bluray) {
-        Document movieToAdd = new Document("Name", bluray.getName());
-
-        movieToAdd.append("Cost", bluray.getCost());
-        movieToAdd.append("Run Time", bluray.getRunTime());
-        movieToAdd.append("Stars Nick Cage", bluray.getStarsNickCage());
-        movieToAdd.append("Rating", bluray.getRating());
-        movieToAdd.append("Year of Release", bluray.getYearOfRelease());
-        movieToAdd.append("Type", bluray.getClass().getSimpleName());
-        return movieToAdd;
+    public static ArrayList<Movie> scanMovie() throws FileNotFoundException {
+        return scanFile();
     }
 
     private static ArrayList<HDDVD> scanHDDVDs() throws FileNotFoundException {
@@ -143,7 +125,7 @@ public class DataConnection {
             movieToReturn.add(new Movie(name, cost, runTime, starsNickCage, rating, yearOfRelease));
         }
 
-
+        scan.close();
         return movieToReturn;
     }
 
@@ -163,8 +145,7 @@ public class DataConnection {
                Aggregates.match(Filters.eq("Type", "DVD"))
            )).first();
             System.out.println(doc);
-            //need to convert document to object
-            //is there a way to avoid three of the same methods for each media type?
+            //Erich challenge is to DRY up the code and send 3 collections only
         }
     }
 }
