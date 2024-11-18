@@ -35,10 +35,17 @@ public class DataConnection {
                 collection.drop();
             }
             System.out.println("No record. Creating now.");
+            ArrayList<Movie> moviesFromFile = scanFile();
+            ArrayList<HDDVD> hddvds = new ArrayList<>();
+            ArrayList<Bluray> blurays = new ArrayList<>();
+            ArrayList<DVD> dvds = new ArrayList<>();
 
-            ArrayList<HDDVD> hddvds = scanHDDVDs();
-            ArrayList<Bluray> blurays = scanBlurays();
-            ArrayList<DVD> dvds = scanDVDs();
+            for (Movie movie : moviesFromFile) {
+                hddvds.add(new HDDVD(movie.getName(), movie.getCost(), movie.getRunTime(), movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
+                blurays.add(new Bluray(movie.getName(), movie.getCost(), movie.getRunTime(), movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
+                dvds.add(new DVD(movie.getName(), movie.getCost(), movie.getRunTime(), movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
+            }
+
             ArrayList<Document> moviesToAdd = new ArrayList<>();
 
             for (HDDVD hddvd : hddvds) {
@@ -72,43 +79,6 @@ public class DataConnection {
         movieToAdd.append("Year of Release", movie.getYearOfRelease());
         movieToAdd.append("Type", movie.getClass().getSimpleName());
         return movieToAdd;
-    }
-
-    public static ArrayList<Movie> scanMovie() throws FileNotFoundException {
-        return scanFile();
-    }
-
-    private static ArrayList<HDDVD> scanHDDVDs() throws FileNotFoundException {
-        ArrayList<HDDVD> hddvds = new ArrayList<>();
-        ArrayList<Movie> movies = scanFile();
-
-        for (Movie movie : movies) {
-            hddvds.add(new HDDVD(movie.getName(), movie.getCost(), movie.getRunTime(),
-                    movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
-        }
-        return hddvds;
-    }
-
-    private static ArrayList<Bluray> scanBlurays() throws FileNotFoundException {
-        ArrayList<Bluray> blurays = new ArrayList<>();
-        ArrayList<Movie> movies = scanFile();
-
-        for (Movie movie : movies) {
-            blurays.add(new Bluray(movie.getName(), movie.getCost(), movie.getRunTime(),
-                    movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
-        }
-        return blurays;
-    }
-
-    private static ArrayList<DVD> scanDVDs() throws FileNotFoundException {
-        ArrayList<DVD> dvds = new ArrayList<>();
-        ArrayList<Movie> movies = scanFile();
-
-        for (Movie movie : movies) {
-            dvds.add(new DVD(movie.getName(), movie.getCost(), movie.getRunTime(),
-                    movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
-        }
-        return dvds;
     }
 
     private static ArrayList<Movie> scanFile() throws FileNotFoundException {
