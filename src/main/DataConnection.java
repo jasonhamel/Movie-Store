@@ -36,28 +36,12 @@ public class DataConnection {
             }
             System.out.println("No record. Creating now.");
             ArrayList<Movie> moviesFromFile = scanFile();
-            ArrayList<HDDVD> hddvds = new ArrayList<>();
-            ArrayList<Bluray> blurays = new ArrayList<>();
-            ArrayList<DVD> dvds = new ArrayList<>();
-
-            for (Movie movie : moviesFromFile) {
-                hddvds.add(new HDDVD(movie.getName(), movie.getCost(), movie.getRunTime(), movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
-                blurays.add(new Bluray(movie.getName(), movie.getCost(), movie.getRunTime(), movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
-                dvds.add(new DVD(movie.getName(), movie.getCost(), movie.getRunTime(), movie.getStarsNickCage(), movie.getRating(), movie.getYearOfRelease()));
-            }
-
             ArrayList<Document> moviesToAdd = new ArrayList<>();
 
-            for (HDDVD hddvd : hddvds) {
-                moviesToAdd.add(getDocument(hddvd));
-            }
-
-            for (Bluray bluray : blurays) {
-                moviesToAdd.add(getDocument(bluray));
-            }
-
-            for (DVD dvd : dvds) {
-                moviesToAdd.add(getDocument(dvd));
+            for (Movie movie: moviesFromFile) {
+                moviesToAdd.add(getDocument(new HDDVD(movie)));
+                moviesToAdd.add(getDocument(new Bluray(movie)));
+                moviesToAdd.add(getDocument(new DVD(movie)));
             }
 
             collection.insertMany(moviesToAdd);
