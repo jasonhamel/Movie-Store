@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Reworked the database commit from 4 loops to one">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +22,17 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Movie-Store" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -86,6 +89,8 @@
     "Application.Main.executor": "Run",
     "Application.QuickStart.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build Movie-Store.executor": "Run",
+    "Gradle.Movie-Store [:main.Main.main()].executor": "Run",
     "Gradle.Movie-Store [test].executor": "Run",
     "JUnit.test in untitled.executor": "Run",
     "JUnit.testTransaction.executor": "Run",
@@ -112,11 +117,13 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <envs>
         <env name="DB_KEY" value="YIdD2qPjWFf2QoMR" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="untitled" />
+      <module name="Movie-Store.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.*" />
@@ -195,6 +202,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Movie-Store" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Movie-Store" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.Movie-Store [test]" />
@@ -204,8 +224,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Movie-Store [test]" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.Movie-Store [test]" />
         <item itemvalue="JUnit.testTransaction.testGetTransaction" />
         <item itemvalue="JUnit.testEmployee.testPunchIn" />
         <item itemvalue="JUnit.test in untitled" />
