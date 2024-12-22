@@ -4,15 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Adds the ability to read text from a file. This text will be comma-delimited and used to load the initial movie inventory for the set">
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Reworked the database commit from 4 loops to one">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/movie-list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/QuickStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/QuickStart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,8 +61,15 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenRunner">
+    <option name="environmentProperties">
+      <map>
+        <entry key="dbkey" value="W98ZYGXvqjqBiQLI" />
+      </map>
+    </option>
+  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -53,9 +82,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DataConnection.executor": "Debug",
     "Application.Main.executor": "Run",
-    "Application.QuickStart.executor": "Debug",
+    "Application.QuickStart.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Movie-Store [test].executor": "Run",
     "JUnit.test in untitled.executor": "Run",
     "JUnit.testTransaction.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -64,13 +95,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "mongoIntegration",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jason/OneDrive/Documents/Coding/Movie-Store",
+    "last_opened_file_path": "C:/Users/Jason/OneDrive/Documents/Coding/Movie-Store/src/main",
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "configurable.group.build"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,8 +110,11 @@
       <recent name="C:\Users\Jason Hamel\Documents\Coding\Movie Store\Movie Store" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QuickStart">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_KEY" value="YIdD2qPjWFf2QoMR" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="untitled" />
       <extension name="coverage">
@@ -92,18 +127,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuickStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.QuickStart" />
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Movie-Store [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="test in untitled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
@@ -151,13 +195,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.Movie-Store [test]" />
+      <item itemvalue="JUnit.test in untitled" />
+      <item itemvalue="JUnit.testEmployee.testPunchIn" />
+      <item itemvalue="JUnit.testTransaction.testGetTransaction" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.QuickStart" />
+        <item itemvalue="Gradle.Movie-Store [test]" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.testTransaction.testGetTransaction" />
         <item itemvalue="JUnit.testEmployee.testPunchIn" />
         <item itemvalue="JUnit.test in untitled" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +357,71 @@
       <option name="project" value="LOCAL" />
       <updated>1730048694630</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add logic to get a list of 10 movies loaded into the database if there are no movies in the database">
+      <option name="closed" value="true" />
+      <created>1730665178997</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730665178997</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Remove the key from the code and update to using env variables.">
+      <option name="closed" value="true" />
+      <created>1730834955158</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1730834955158</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Move from the QuickStart.java class to the DataConnection.java class.">
+      <option name="closed" value="true" />
+      <created>1730918216689</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1730918216689</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Delete QuickStart.java class">
+      <option name="closed" value="true" />
+      <created>1730918257294</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1730918257294</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Retrieve a movie based on multiple conditions. Only works with DVDs.">
+      <option name="closed" value="true" />
+      <created>1731253270009</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1731253270009</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Remove the three getDocument methods for each movie type and replace them with a single method using generics. Only make one write request to the database.&#10;&#10;Change the results of the null-check condition. If the data contains information at first run, the table is dropped and then the data is created and pushed each time the application runs. This is only for testing and obviously awful to put into a prod situation">
+      <option name="closed" value="true" />
+      <created>1731783837194</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1731783837194</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Remove the three scan methods for the media types and replaced them with the scanFile method. That list is then iterated over to create the movies for each type of media.">
+      <option name="closed" value="true" />
+      <created>1731894988552</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1731894988552</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Reworked the database commit from 4 loops to one">
+      <option name="closed" value="true" />
+      <created>1733685274919</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733685274919</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -323,7 +438,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="mongoIntegration" />
                       </list>
                     </value>
                   </entry>
@@ -336,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit with starting of requirements.txt made" />
     <MESSAGE value="Began work on Movie class and completed requirements.txt" />
     <MESSAGE value="Created the DVD class and overrode the discount method from the Discount class" />
     <MESSAGE value="Created the HDDVD class and overrode the discount method from the Discount class. Lol @ the implementation of the discount method in both DVD and HDDVD. Will need to circle back to that" />
@@ -354,7 +468,15 @@
     <MESSAGE value="Deleted some SQL code and testing a push to this branch" />
     <MESSAGE value="Add the mongo package using Maven, build the QuickStart.java Class to test" />
     <MESSAGE value="Adds the ability to read text from a file. This text will be comma-delimited and used to load the initial movie inventory for the set" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds the ability to read text from a file. This text will be comma-delimited and used to load the initial movie inventory for the set" />
+    <MESSAGE value="Add logic to get a list of 10 movies loaded into the database if there are no movies in the database" />
+    <MESSAGE value="Remove the key from the code and update to using env variables." />
+    <MESSAGE value="Move from the QuickStart.java class to the DataConnection.java class." />
+    <MESSAGE value="Delete QuickStart.java class" />
+    <MESSAGE value="Retrieve a movie based on multiple conditions. Only works with DVDs." />
+    <MESSAGE value="Remove the three getDocument methods for each movie type and replace them with a single method using generics. Only make one write request to the database.&#10;&#10;Change the results of the null-check condition. If the data contains information at first run, the table is dropped and then the data is created and pushed each time the application runs. This is only for testing and obviously awful to put into a prod situation" />
+    <MESSAGE value="Remove the three scan methods for the media types and replaced them with the scanFile method. That list is then iterated over to create the movies for each type of media." />
+    <MESSAGE value="Reworked the database commit from 4 loops to one" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked the database commit from 4 loops to one" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -363,11 +485,6 @@
           <properties class="java.util.InputMismatchException" package="java.util" />
           <option name="timeStamp" value="7" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/QuickStart.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
