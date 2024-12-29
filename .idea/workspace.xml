@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Reworked the database commit from 4 loops to one">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="16a3eaa1-2fa8-4b89-97b3-f35e77d1266b" name="Changes" comment="Messing with adding Gradle to this project to manage the Mongo packages" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,33 +80,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DataConnection.executor": "Debug",
-    "Application.Main.executor": "Run",
-    "Application.QuickStart.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build Movie-Store.executor": "Run",
-    "Gradle.Movie-Store [:main.Main.main()].executor": "Run",
-    "Gradle.Movie-Store [test].executor": "Run",
-    "JUnit.test in untitled.executor": "Run",
-    "JUnit.testTransaction.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "mongoIntegration",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jason/OneDrive/Documents/Coding/Movie-Store/src/main",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DataConnection.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuickStart.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build Movie-Store.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Movie-Store [:main.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Movie-Store [test].executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test in untitled.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.testTransaction.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mongoIntegration&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jason/OneDrive/Documents/Coding/Movie-Store/src/main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jason Hamel\Documents\Coding\Movie Store\Movie Store" />
@@ -198,19 +195,6 @@
       <option name="MAIN_CLASS_NAME" value="test.testTransaction" />
       <option name="METHOD_NAME" value="testGetTransaction" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Movie-Store" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Movie-Store" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -441,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733685274919</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Messing with adding Gradle to this project to manage the Mongo packages">
+      <option name="closed" value="true" />
+      <created>1734884878572</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1734884878572</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -471,7 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Began work on Movie class and completed requirements.txt" />
     <MESSAGE value="Created the DVD class and overrode the discount method from the Discount class" />
     <MESSAGE value="Created the HDDVD class and overrode the discount method from the Discount class. Lol @ the implementation of the discount method in both DVD and HDDVD. Will need to circle back to that" />
     <MESSAGE value="Reworked the Movie class to better implement the required discounts. Removed the Discounts class entirely." />
@@ -496,7 +487,8 @@
     <MESSAGE value="Remove the three getDocument methods for each movie type and replace them with a single method using generics. Only make one write request to the database.&#10;&#10;Change the results of the null-check condition. If the data contains information at first run, the table is dropped and then the data is created and pushed each time the application runs. This is only for testing and obviously awful to put into a prod situation" />
     <MESSAGE value="Remove the three scan methods for the media types and replaced them with the scanFile method. That list is then iterated over to create the movies for each type of media." />
     <MESSAGE value="Reworked the database commit from 4 loops to one" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked the database commit from 4 loops to one" />
+    <MESSAGE value="Messing with adding Gradle to this project to manage the Mongo packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Messing with adding Gradle to this project to manage the Mongo packages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
