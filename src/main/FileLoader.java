@@ -20,6 +20,7 @@ public class FileLoader {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+
         ArrayList<Document> moviesToAdd = new ArrayList<>();
 
         for (Movie movie : moviesFromFile) {
@@ -28,7 +29,7 @@ public class FileLoader {
             moviesToAdd.add(getDocument(new DVD(movie)));
         }
 
-                DataConnection.getInstance().collection.insertMany(moviesToAdd);
+        DataConnection.getInstance().collection.insertMany(moviesToAdd);
 
     }
 
