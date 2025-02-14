@@ -8,8 +8,9 @@ public class Main {
         FileLoader.loadFiles();
         Searcher.findName("Hot Rod");
 
-        // Question for Erich. When you have a huge database,
-        // and you want the user to be able to apply filters,
-        // do you need to make a unique method for all the possible combos?
+        // Version and merge to main
+        // New project for Spring using the initializer
+        // New branch for new project?
+        // Search method to start
     }
 }
