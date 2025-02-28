@@ -1,7 +1,5 @@
-package java;
-
 import model.movie.HDDVD;
-import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -10,7 +8,7 @@ public class testHDDVD {
     HDDVD hddvd;
     HDDVD hddvd2;
 
-    @Before("")
+    @BeforeEach
     public void setup() {
         hddvd = new HDDVD("Hot Fuzz", 50, 200, false, "PG13", 2005);
         hddvd2 = new HDDVD("National Treasure", 100, 202, true, "PG13", 2001);

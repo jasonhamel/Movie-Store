@@ -1,8 +1,6 @@
-package java;
-
 import model.movie.Bluray;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
@@ -11,7 +9,7 @@ public class testBluray {
     Bluray bluray;
     Bluray bluray2;
 
-    @Before("")
+    @BeforeEach
     public void setup() {
         bluray = new Bluray("Who Shot Roger Rabbit", 50, 178, false, "PG13", 1992);
         bluray2 = new Bluray("The Rock", 100, 174, true, "R", 1992);

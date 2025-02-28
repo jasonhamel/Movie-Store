@@ -2,14 +2,14 @@ import model.movie.Bluray;
 import model.movie.DVD;
 import model.movie.HDDVD;
 import model.movie.Movie;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class testStore {
     Movie[] movies;
 
-    @Before("")
+    @BeforeEach
     public void setup() {
         movies = new Movie[] {
                 new DVD("Gone in 60 Seconds", 40, 60, true, "PG13", 1998),

@@ -1,8 +1,6 @@
-package java;
-
 import model.movie.DVD;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class testDVD {
@@ -10,7 +8,7 @@ public class testDVD {
     DVD dvd;
     DVD dvd2;
 
-    @Before("")
+    @BeforeEach
     public void setup() {
         dvd = new DVD("Turbulent Juice", 50, 90, false, "R", 2022);
         dvd2 = new DVD("Face Off", 100, 120, true, "PG13", 1999);
