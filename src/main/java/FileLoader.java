@@ -1,4 +1,4 @@
-import model.movie.Movie;
+import com.JasonVideo.Movie_Store.Model.Movie;
 import org.bson.Document;
 
 import java.io.FileInputStream;

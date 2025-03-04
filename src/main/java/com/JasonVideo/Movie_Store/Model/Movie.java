@@ -1,10 +1,13 @@
-package model.movie;
-
-
+package com.JasonVideo.Movie_Store.Model;
+import jakarta.persistence.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import java.text.DecimalFormat;
 
+@Document
 public class Movie {
     DecimalFormat df = new DecimalFormat("#.##");
+    @Id
+    private String id;
     private String name;
     private double cost;
     private double runTime;
@@ -21,6 +24,7 @@ public class Movie {
         this.rating = rating;
         this.yearOfRelease = yearOfRelease;
         this.format = format;
+        this.id = name+format;
         discountForCage();
         discountForMediaType();
     }

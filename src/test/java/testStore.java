@@ -1,4 +1,4 @@
-import model.movie.Movie;
+import com.JasonVideo.Movie_Store.Model.Movie;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
