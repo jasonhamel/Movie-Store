@@ -1,6 +1,3 @@
-import model.movie.Bluray;
-import model.movie.DVD;
-import model.movie.HDDVD;
 import model.movie.Movie;
 
 import java.util.HashMap;
@@ -30,12 +27,11 @@ public class Store {
     }
 
     public int getMovie(Movie movie) {
-        int typeOfMovie = getTypeOfMovie(movie);
-        if (typeOfMovie == 1) {
+        if (movie.getFormat().equalsIgnoreCase("DVD")) {
             return dvdStock.get(movie.getName());
-        } else if (typeOfMovie == 2) {
+        } else if (movie.getFormat().equalsIgnoreCase("HDDVD")) {
             return hddvdStock.get(movie.getName());
-        } else if (typeOfMovie == 3) {
+        } else if (movie.getFormat().equalsIgnoreCase("BLURAY")) {
             return blurayStock.get(movie.getName());
         }
         return 404;
@@ -43,13 +39,13 @@ public class Store {
 
     public void changeStock(Movie movie, int quantity) {
         String name = movie.getName();
-        int type = getTypeOfMovie(movie);
+        String type = movie.getFormat();
         if (checkIfInStock(type, quantity, name)) {
-            if (type == 1) {
+            if (type.equalsIgnoreCase("DVD")) {
                 dvdStock.merge(name, quantity, Integer::sum);
-            } else if (type == 2) {
+            } else if (type.equalsIgnoreCase("HDDVD")) {
                 hddvdStock.merge(name, quantity, Integer::sum);
-            } else if (type == 3) {
+            } else if (type.equalsIgnoreCase("BLURAY")) {
                 blurayStock.merge(name, quantity, Integer::sum);
             }
         } else {
@@ -58,23 +54,12 @@ public class Store {
 
     }
 
-    public int getTypeOfMovie(Movie movie) {
-        if (movie instanceof DVD) {
-            return 1;
-        } else if (movie instanceof HDDVD) {
-            return 2;
-        } else if (movie instanceof Bluray) {
-            return 3;
-        }
-        return 0;
-    }
-
-    public boolean checkIfInStock(int type, int quantity, String name) {
-        if (type == 1 && dvdStock.get(name) != null) {
+    public boolean checkIfInStock(String type, int quantity, String name) {
+        if (type.equalsIgnoreCase("DVD") && dvdStock.get(name) != null) {
             return dvdStock.get(name) + quantity >= 0;
-        } else if (type == 2 && hddvdStock.get(name) != null) {
+        } else if (type.equalsIgnoreCase("HDDVD") && hddvdStock.get(name) != null) {
             return hddvdStock.get(name) + quantity >= 0;
-        } else if (type == 3 && blurayStock.get(name) != null) {
+        } else if (type.equalsIgnoreCase("BLURAY") && blurayStock.get(name) != null) {
             return blurayStock.get(name) + quantity >= 0;
         }
         return true;

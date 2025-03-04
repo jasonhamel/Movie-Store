@@ -1,6 +1,3 @@
-import model.movie.Bluray;
-import model.movie.DVD;
-import model.movie.HDDVD;
 import model.movie.Movie;
 import org.bson.Document;
 
@@ -22,9 +19,7 @@ public class FileLoader {
         ArrayList<Document> moviesToAdd = new ArrayList<>();
 
         for (Movie movie : moviesFromFile) {
-            moviesToAdd.add(getDocument(new HDDVD(movie)));
-            moviesToAdd.add(getDocument(new Bluray(movie)));
-            moviesToAdd.add(getDocument(new DVD(movie)));
+            moviesToAdd.add(getDocument(movie));
         }
 
         DataConnection.getInstance().collection.insertMany(moviesToAdd);
@@ -39,7 +34,7 @@ public class FileLoader {
         movieToAdd.append("Stars Nick Cage", movie.getStarsNickCage());
         movieToAdd.append("Rating", movie.getRating());
         movieToAdd.append("Year of Release", movie.getYearOfRelease());
-        movieToAdd.append("Type", movie.getClass().getSimpleName());
+        movieToAdd.append("Type", movie.getFormat());
         return movieToAdd;
     }
 
@@ -47,6 +42,7 @@ public class FileLoader {
         ArrayList<Movie> movieToReturn = new ArrayList<>();
         FileInputStream fis = new FileInputStream("movie-list.txt");
         Scanner scan = new Scanner(fis).useDelimiter(",");
+
         while (scan.hasNext()) {
             String name = scan.next();
             double cost = scan.nextDouble();
@@ -54,7 +50,8 @@ public class FileLoader {
             boolean starsNickCage = scan.nextBoolean();
             String rating = scan.next();
             int yearOfRelease = scan.nextInt();
-            movieToReturn.add(new Movie(name, cost, runTime, starsNickCage, rating, yearOfRelease));
+            String format = scan.next();
+            movieToReturn.add(new Movie(name, cost, runTime, starsNickCage, rating, yearOfRelease, format));
         }
 
         scan.close();

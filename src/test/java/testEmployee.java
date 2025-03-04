@@ -1,13 +1,11 @@
-
-
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class testEmployee {
     Employee employee;
 
-    @Before("")
+    @BeforeEach
     public void setup() {
         employee = new Employee ("Jason Hamel", 1);
     }

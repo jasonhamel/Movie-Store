@@ -11,15 +11,16 @@ public class Movie {
     private boolean starsNickCage;
     private String rating;
     private int yearOfRelease;
+    private String format;
 
-
-    public Movie(String name, double cost, double runTime, boolean starsNickCage, String rating, int yearOfRelease) {
+    public Movie(String name, double cost, double runTime, boolean starsNickCage, String rating, int yearOfRelease, String format) {
         this. name = name;
         this.cost = cost;
         this.runTime = runTime;
         this.starsNickCage = starsNickCage;
         this.rating = rating;
         this.yearOfRelease = yearOfRelease;
+        this.format = format;
         discountForCage();
         discountForMediaType();
     }
@@ -31,6 +32,7 @@ public class Movie {
         this.starsNickCage = source.starsNickCage;
         this.rating = source.rating;
         this.yearOfRelease = source.yearOfRelease;
+        this.format = source.format;
     }
 
     @Override
@@ -40,7 +42,8 @@ public class Movie {
                 "Runtime in Minutes: " + this.runTime + "\n" +
                 "Stars Nick Cage: " + this.starsNickCage + "\n" +
                 "MPCRS Rating: " + this.rating + "\n" +
-                "Year of Release: " + this.yearOfRelease;
+                "Year of Release: " + this.yearOfRelease + "\n" +
+                "Disc Type: " + this.format;
     }
 
     public String getName() {
@@ -91,6 +94,14 @@ public class Movie {
         this.yearOfRelease = yearOfRelease;
     }
 
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
     public void discountForCage() {
         if (getStarsNickCage()) {
             this.cost -= 4;
@@ -100,9 +111,9 @@ public class Movie {
     private void discountForMediaType() {
         final double DVD_DISCOUNT = .1;
         final double HDDVD_DISCOUNT = .5;
-        if (this instanceof DVD) {
+        if (this.getFormat().equalsIgnoreCase("DVD")) {
             setCost(getCost() * DVD_DISCOUNT);
-        } else if (this instanceof HDDVD) {
+        } else if (this.getFormat().equalsIgnoreCase("HDDVD")) {
             setCost(getCost() * HDDVD_DISCOUNT);
         }
     }

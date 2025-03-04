@@ -1,6 +1,6 @@
 import model.movie.*;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class testTransaction {
@@ -11,15 +11,9 @@ public class testTransaction {
             new Employee("Gillian", 2)
     };
     Movie[] movies = new Movie[] {
-            new DVD("Gone in 60 Seconds", 40, 60, true, "PG13", 1998),
-            new DVD("Lord of the Rings", 40, 120, false, "PG13", 1998),
-            new HDDVD("Gone in 60 Seconds", 40, 60, true, "PG13", 1998),
-            new HDDVD("Lord of the Rings", 40, 120, false, "PG13", 1998),
-            new Bluray("Gone in 60 Seconds", 40, 60, true, "PG13", 1998),
-            new Bluray("Lord of the Rings", 40, 120, false, "PG13", 1998)
     };
 
-    @Before("")
+    @BeforeEach
     public void setup() {
         transactions = new Transaction[] {
                 new Transaction(employees[0].getName(), employees[0].getEmployeeNumber(), movies[0].getCost()),
