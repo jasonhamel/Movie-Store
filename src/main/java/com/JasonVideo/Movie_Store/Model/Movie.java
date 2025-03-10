@@ -1,11 +1,13 @@
 package com.JasonVideo.Movie_Store.Model;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import java.text.DecimalFormat;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 
 @Document
 public class Movie {
-    DecimalFormat df = new DecimalFormat("#.##");
+
     @Id
     private String id;
     private String name;
@@ -63,7 +65,8 @@ public class Movie {
     }
 
     public void setCost(double cost) {
-        this.cost = Double.parseDouble(df.format(cost));
+        BigDecimal bd = new BigDecimal(cost).setScale(2, RoundingMode.HALF_UP);
+        this.cost = bd.doubleValue();
     }
 
     public double getRunTime() {
