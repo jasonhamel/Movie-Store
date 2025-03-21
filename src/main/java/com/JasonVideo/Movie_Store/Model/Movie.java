@@ -4,7 +4,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.text.DecimalFormat;
 
 
-@Document
+@Document(collection = "movies")
 public class Movie {
 
     @Id
@@ -16,6 +16,9 @@ public class Movie {
     private String rating;
     private int yearOfRelease;
     private String format;
+
+    public Movie() {
+    }
 
     public Movie(String name, double cost, double runTime, boolean starsNickCage, String rating, int yearOfRelease, String format) {
         this. name = name;
